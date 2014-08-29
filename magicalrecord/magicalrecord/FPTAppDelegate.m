@@ -14,7 +14,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    [MagicalRecord setupAutoMigratingCoreDataStack];
+    [MagicalRecord setupCoreDataStackWithStoreNamed:@"MyDatabase.sqlite"];
     
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

@@ -60,7 +60,12 @@ static const CGFloat margin = 10.0f;
         user.userName = self.nameField.text;
         user.count = @(1);
     }
-    [[NSManagedObjectContext MR_defaultContext] saveToPersistentStoreAndWait];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [[NSManagedObjectContext MR_defaultContext] MR_saveOnlySelfWithCompletion:^(BOOL success, NSError *error) {
+            NSLog(success ? @"saved successfully.": @"could not save.");
+        }];
+    });
+    
     [self.navigationController popViewControllerAnimated:NO];
 }
 

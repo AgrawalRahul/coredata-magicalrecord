@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "magicalrecord/FPTAddUserController.m"
-            timestampString = "430515533.711272"
+            timestampString = "431004663.783825"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "-addName:"
             landmarkType = "5">
          </BreakpointContent>
